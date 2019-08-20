@@ -67,7 +67,7 @@ elif scene_name == "3FO4K2PV12YH":
     leftmins.append(Point(1036.77, -2435.94, 0))
     rightmaxs.append(Point(2654.31, 4800, 2800))
 #Bound for 3FO4K2O1B9I5 6 rooms(OK)
-elif scene_name == "3FO4K2O1B9I":
+elif scene_name == "3FO4K2O1B9I5":
     leftmins.append(Point(-5521, -5922.8, 0))
     rightmaxs.append(Point(-202, -2651, 2800))
 
