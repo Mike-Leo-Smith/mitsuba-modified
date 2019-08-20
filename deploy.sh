@@ -9,6 +9,6 @@ while [ ! -f "mitsuba" ]; do
   wget https://github.com/Mike-Leo-Smith/mitsuba-modified/archive/master.zip
   unzip master.zip -d .
   mv mitsuba-modified-master mitsuba
-  rm mitsuba.zip
+  rm master.zip
 done
 cd mitsuba && scons -j24 && source setpath.sh
