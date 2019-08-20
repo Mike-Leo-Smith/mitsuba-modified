@@ -6,6 +6,7 @@ import numpy as np
 import time
 import pyexr
 from os.path import expanduser
+from sys import argv
 #  Get  a  reference  to  the  thread's  file  resolver
 fileResolver  =  Thread.getThread().getFileResolver()
 #  Register  any  searchs  path  needed  to  load  scene  resources  (optional)
@@ -13,7 +14,8 @@ fileResolver  =  Thread.getThread().getFileResolver()
 #  Optional:  supply  parameters  that  can  be  accessed
 #  by  the  scene  (e.g.  as  $myParameter)
 paramMap  =  StringMap()
-scene_name = "3FO4K2O1B9I5"
+scene_name = argv[1]
+print "Rendering scene #%s#" % scene_name
 paramMap['myParameter']  =  'value'
 #  Load  the  scene  from  an  XML  file
 scene  =  SceneHandler.loadScene(fileResolver.resolve(expanduser("/home/xhg/Desktop/kujiale_files/mitsuba/" + scene_name + "_full_new_diffuse_twosided.xml")),  paramMap)
