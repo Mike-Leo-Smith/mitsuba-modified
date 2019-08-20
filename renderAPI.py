@@ -5,8 +5,12 @@ import multiprocessing
 import numpy as np
 import time
 import pyexr
-from os.path import expanduser
+from os import mkdir
+from os.path import expanduser, exists
 from sys import argv
+
+if not exists("result"):
+    mkdir("result")
 #  Get  a  reference  to  the  thread's  file  resolver
 fileResolver  =  Thread.getThread().getFileResolver()
 #  Register  any  searchs  path  needed  to  load  scene  resources  (optional)
