@@ -8,5 +8,4 @@ pip install pyexr
 while [ ! -f "mitsuba" ]; do 
   git clone https://github.com/Mike-Leo-Smith/mitsuba-modified.git mitsuba
 done
-cd mitsuba && scons -j24
-source setpath.sh
+cd mitsuba && scons -j24 && source setpath.sh
