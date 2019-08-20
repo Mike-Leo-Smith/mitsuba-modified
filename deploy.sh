@@ -5,10 +5,10 @@ apt -y install build-essential scons mercurial libpng-dev libjpeg-dev libilmbase
 pip install --upgrade pip
 pip install numpy==1.16
 pip install pyexr
-while [ ! -f "mitsuba" ]; do 
+while [ ! -d "mitsuba" ]; do 
   wget https://github.com/Mike-Leo-Smith/mitsuba-modified/archive/master.zip
   unzip master.zip -d .
   mv mitsuba-modified-master mitsuba
-  rm master.zip
 done
+rm master.zip
 cd mitsuba && scons -j24 && source setpath.sh
