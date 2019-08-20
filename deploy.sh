@@ -7,7 +7,7 @@ pip install numpy==1.16
 pip install pyexr
 while [ ! -f "mitsuba" ]; do 
   wget https://github.com/Mike-Leo-Smith/mitsuba-modified/archive/master.zip
-  unzip master.zip
+  unzip master.zip -d .
   mv mitsuba-modified-master mitsuba
   rm mitsuba.zip
 done
